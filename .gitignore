@@ -26,17 +26,6 @@ node_modules
 version.txt
 target
 
-# copied configs
-.browserslistrc
-.editorconfig
-.eslintignore
-.eslintrc.js
-.eslintcache
-prettier.config.js
-tsconfig-shared.json
-lint-staged.config.js
-jest-shared.config.js
-
 # testing
 coverage
 
