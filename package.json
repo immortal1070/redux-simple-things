@@ -1,39 +1,32 @@
 {
-  "name": "redux-events",
+  "name": "redux-events-parent",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
-  },
+  "private": false,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "rollback": "lerna exec -- npm run rollback",
+    "bootstrap": "lerna bootstrap --hoist --force-local --concurrency 1 --no-ci && npm rebuild husky",
+    "bootstrap-ci": "lerna bootstrap --hoist --force-local --concurrency 1 --ci",
+    "build": "lerna exec --scope redux-simple-events -- npm run build",
+    "test": "lerna exec --scope redux-simple-events -- npm run test",
+    "test:all": "lerna exec -- npm run test",
+    "clean-cache": "npm cache clean --force"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "dependencies": {
+    "lerna": "3.17.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "devDependencies": {
+    "cross-spawn": "^7.0.3",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-typescript-prettier": "^3.1.0",
+    "lint-staged": "10.2.4",
+    "prettier": "2.0.5",
+    "react-styleguidist": "10.6.1"
+  },
+  "bundleDependencies": [],
+  "keywords": [
+    "react",
+    "component"
+  ],
+  "description": "Redux events library",
+  "author": "Sergei Malakhov"
 }

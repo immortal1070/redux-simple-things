@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
@@ -21,3 +19,39 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# working folders
+node_modules
+version.txt
+target
+
+# copied configs
+.browserslistrc
+.editorconfig
+.eslintignore
+.eslintrc.js
+.eslintcache
+prettier.config.js
+tsconfig-shared.json
+lint-staged.config.js
+jest-shared.config.js
+
+# testing
+coverage
+
+#IDEs
+.idea/
+*.iml
+nbproject
+
+# misc
+.docz
+
+# styleguide
+**/styleguide/generated
+
+#lerna
+lerna-debug.log
+
+yarn.lock
