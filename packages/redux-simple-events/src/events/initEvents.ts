@@ -1,4 +1,4 @@
-import {Action, ActionCreator, Event} from './types'
+import {ActionCreator, ActionTemplate, Event} from './types'
 
 /**
  * "event" is an object which joins
@@ -21,7 +21,7 @@ export default (): InitEvents => {
   const allEvents: Event[] = []
 
   const actionCreatorWrapper = (type: string, action: ActionCreator) => {
-    return (...params: unknown[]): Action => {
+    return (...params: unknown[]): ActionTemplate => {
       const actionObj = action ? {...action(...params)} : {}
       return {
         ...actionObj,

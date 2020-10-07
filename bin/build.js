@@ -8,8 +8,6 @@ const isWatch = process.argv.find(arg => arg === '--watch')
 process.env.BM_NODE_PATH = paths.appNodeModules
 
 processRunner.run(require.resolve('eslint/bin/eslint'), [
-  //with this option (no-eslintrc) linter config file will not be searched in the bm-ui folder.
-  //if not set, then .eslintrc.json from bm-ui will be used used
   '--config',
   require.resolve(`./../.eslintrc.js`),
   paths.appSrc,
@@ -19,7 +17,6 @@ processRunner.run(require.resolve('eslint/bin/eslint'), [
 
 processRunner.run(require.resolve('@babel/cli/bin/babel'), [
   '--source-maps',
-  '--sourceMaps=both',
   '--copy-files',
   ...(isWatch ? ['--watch'] : []),
   ...(isWatch ? ['--verbose'] : []),
@@ -27,9 +24,13 @@ processRunner.run(require.resolve('@babel/cli/bin/babel'), [
   '--no-babelrc',
   '--extensions',
   '.ts,.tsx,.js,.jsx',
-  '--sourceRoot=' + paths.appSrc,
   '--ignore=*.test.js',
   '--out-dir',
-  paths.appBuild,
+  paths.appDist,
   paths.appSrc
+])
+
+processRunner.run(require.resolve('typescript/bin/tsc'), [
+  '--project',
+  'tsconfig.types.json',
 ])

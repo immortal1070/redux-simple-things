@@ -12,9 +12,9 @@ module.exports = (api) => {
     '@babel/plugin-transform-typescript'
   ]
 
-  if (isInDevelopmentMode) {
-    pluginsList.push(require.resolve('react-hot-loader/babel'))
-  }
+  // if (isInDevelopmentMode) {
+  //   pluginsList.push(require.resolve('react-hot-loader/babel'))
+  // }
 
   return {
     plugins: pluginsList,

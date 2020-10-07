@@ -4,13 +4,10 @@ module.exports = {
     "src/**/*.{js,jsx,ts,tsx}",
     "!src/**/*.d.ts"
   ],
-  "setupFiles": [
-    "react-app-polyfill/jsdom"
-  ],
   "testMatch": [
     "<rootDir>/**/*.{spec,test}.{js,jsx,ts,tsx}"
   ],
-  "testEnvironment": "enzyme",
+  "testEnvironment": "jsdom",
   "transform": {
     "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/../../../config/jest/babelTransform.js",
     "^.+\\.css$": "<rootDir>/../../../config/jest/cssTransform.js",

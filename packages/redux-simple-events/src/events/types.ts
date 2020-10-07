@@ -1,13 +1,15 @@
-export interface Action {
-  /**
-   * type is optional because event creator receives action without type and set it automatically
-   */
-  type?: string
+export interface ActionTemplate {
   payload?: Record<string, unknown>
   [key: string]: unknown
 }
 
-export type ActionCreator = (...args: unknown[]) => Action
+export interface Action {
+  type: string
+  payload?: Record<string, unknown>
+  [key: string]: unknown
+}
+
+export type ActionCreator = (...args: unknown[]) => ActionTemplate
 
 export type State = Record<string, unknown>
 

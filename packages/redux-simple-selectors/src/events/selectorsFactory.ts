@@ -1,7 +1,7 @@
 import {State} from './types'
 import {createSelectorCreator, defaultMemoize} from 'reselect'
-import {isPlainObject} from '../utils/objectUtils'
 import {clone, equals, path} from 'ramda'
+import {isPlainObject} from '../utils/objectUtils'
 
 /**
  * selector with deep equals instead of "==="
@@ -62,7 +62,7 @@ const fillSelectorsRec = (object: State, ...pathParams: string[]): State => {
     }
 
  Usage:
- const protocolVersionTypes = useSelector(samlConfigStoreRouting.types.protocolVersionTypes._selector)
+ const protocolVersionTypes = useSelector(samlConfigStoreRouting.types.protocolVersionTypes.selector)
 
  */
 export const fillSimpleSelectors = (

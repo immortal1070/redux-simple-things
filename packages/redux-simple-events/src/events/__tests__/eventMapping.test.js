@@ -16,9 +16,13 @@ describe('eventMapping', () => {
       pageClosedEvent.reducer(emptyState)
     )
 
-    expect(reducersMap[pageOpenedEvent.type](emptyState).opened).toEqual(true)
+    expect(reducersMap[pageOpenedEvent.type](emptyState, {}).opened).toEqual(
+      true
+    )
 
-    expect(reducersMap[pageClosedEvent.type](emptyState).opened).toEqual(false)
+    expect(reducersMap[pageClosedEvent.type](emptyState, {}).opened).toEqual(
+      false
+    )
   })
 
   it('eventsToReducersMap processes undefined correctly', () => {
