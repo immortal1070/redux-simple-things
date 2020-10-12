@@ -1,4 +1,4 @@
-import {State} from './types'
+import {State} from '../types'
 import {createSelectorCreator, defaultMemoize} from 'reselect'
 import {clone, equals, path} from 'ramda'
 import {isPlainObject} from '../utils/objectUtils'

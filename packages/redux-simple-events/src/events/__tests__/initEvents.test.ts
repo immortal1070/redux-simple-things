@@ -1,9 +1,9 @@
 import initEvents from '../initEvents'
-import {Action, Event, State} from '../types'
+import {Action, ActionCreator, ActionTemplate, Event, State} from '../../types'
 
 describe('initEvents', () => {
   const pageOpenedType = 'PAGE_OPENED'
-  const pageOpenedActionCreator = (someOpenParam: unknown): Action => ({
+  const pageOpenedActionCreator = (someOpenParam: unknown): ActionTemplate => ({
     payload: {
       someOpenParam
     }
@@ -65,6 +65,7 @@ describe('initEvents', () => {
     expect(pageOpenedEvent.type).toEqual(pageOpenedType)
     const state = {}
     const action = {
+      type: 'something',
       payload: {
         someOpenParam: 'someOpenParam'
       }

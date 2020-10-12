@@ -1,4 +1,8 @@
-import {eventsToReducersMap} from '../eventMapping'
+import {
+  applyReducer,
+  eventsToReducersMap,
+  generateReducers
+} from '../eventMapping'
 
 import {pageClosedEvent, pageOpenedEvent, testData} from './testData'
 
@@ -33,5 +37,27 @@ describe('eventMapping', () => {
   it('eventsToReducersMap processes empty array correctly', () => {
     const reducersMap = eventsToReducersMap([])
     expect(Object.keys(reducersMap).length).toEqual(0)
+  })
+
+  it('applyReducer applies reducer correctly', () => {
+    const reducers = eventsToReducersMap(testData)
+    expect(
+      applyReducer(emptyState, {type: pageClosedEvent.type}, reducers)
+    ).toEqual(pageClosedEvent.reducer(emptyState))
+  })
+
+  it(`applyReducer doesn't change state if no action is present`, () => {
+    const reducersMap = eventsToReducersMap(testData)
+    expect(applyReducer(emptyState, {type: 'dummy'}, reducersMap)).toEqual(
+      emptyState
+    )
+  })
+
+  it(`generateReducers creates correct reducers`, () => {
+    const reducers = generateReducers(emptyState, testData)
+    const event = pageClosedEvent
+    expect(reducers(emptyState, event.action())).toEqual(
+      event.reducer(emptyState)
+    )
   })
 })

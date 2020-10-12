@@ -1,4 +1,4 @@
-import {ActionCreator, ActionTemplate, Event} from './types'
+import {ActionCreator, ActionTemplate, Event} from '../types'
 
 /**
  * "event" is an object which joins

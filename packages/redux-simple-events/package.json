@@ -1,15 +1,12 @@
 {
   "name": "redux-simple-events",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {},
-  "main": "./dist/index.js",
+  "main": "./dist/index.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "node ../../bin/build.js",
     "test": "node ../../bin/test.js --watchAll=false"
-  },
-  "eslintConfig": {
-    "extends": "../../.eslintrc.js"
   },
   "devDependencies": {
     "@babel/core": "7.9.0",
@@ -51,5 +48,18 @@
     "jest-resolve": "24.9.0",
     "jest-watch-typeahead": "0.4.2",
     "typescript": "~3.7.2"
-  }
+  },
+  "eslintConfig": {
+    "extends": "../../.eslintrc.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/immortal1070/redux-simple-events/packages/redux-simple-events",
+  "keywords": [
+    "javascript",
+    "redux"
+  ],
+  "author": "Sergei Malakhov <malahov.s.al@gmail.com>",
+  "license": "MIT"
 }

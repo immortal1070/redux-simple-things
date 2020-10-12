@@ -1,7 +1,7 @@
 {
   "name": "redux-events-parent",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "scripts": {
     "rollback": "lerna exec -- npm run rollback",
     "bootstrap": "lerna bootstrap --hoist --force-local --concurrency 1 --no-ci && npm rebuild husky",
@@ -32,9 +32,13 @@
   },
   "bundleDependencies": [],
   "keywords": [
-    "react",
-    "component"
+    "react"
   ],
   "description": "Redux events library",
-  "author": "Sergei Malakhov"
+  "author": "Sergei Malakhov <malahov.s.al@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/immortal1070/redux-simple-events.git"
+  },
+  "license": "MIT"
 }
