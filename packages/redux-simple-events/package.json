@@ -1,6 +1,6 @@
 {
   "name": "redux-simple-events",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple Redux Events - easy way to work with Redux",
   "main": "./dist/index.ts",
   "types": "./dist/index.d.ts",
