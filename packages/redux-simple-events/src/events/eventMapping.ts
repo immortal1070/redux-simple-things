@@ -32,7 +32,7 @@ export const applyReducer = (
  */
 export const generateReducers = (initialState: State, events: Event[]) => {
   const reducers = eventsToReducersMap(events)
-  return (state = initialState, action: Action = {} as Action) => {
+  return (state = initialState, action: Action = {} as Action): State => {
     return applyReducer(state, action, reducers)
   }
 }

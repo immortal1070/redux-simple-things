@@ -1,5 +1,5 @@
 import initEvents from '../initEvents'
-import {Action, ActionCreator, ActionTemplate, Event, State} from '../../types'
+import {Action, ActionTemplate, Event, State} from '../../types'
 
 describe('initEvents', () => {
   const pageOpenedType = 'PAGE_OPENED'

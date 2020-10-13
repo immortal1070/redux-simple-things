@@ -58,11 +58,11 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/immortal1070/redux-simple-events/packages/redux-simple-selectors",
+  "repository": "https://github.com/immortal1070/redux-simple-things/tree/master/packages/redux-simple-selectors",
   "keywords": [
     "javascript",
     "redux"
   ],
-  "author": "Sergei Malakhov <malahov.s.al@gmail.com>",
+  "author": "immortal1070",
   "license": "MIT"
 }
