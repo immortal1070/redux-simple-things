@@ -55,6 +55,16 @@ export const configMetadatasLoaded = event({
 // ...
 export const configsEvents = allEvents
 ```
+GenerateReducers from the events and pass it to Redux:
+
+```javascript
+import {configsEvents} from './configsEvents'
+
+const createRootReducer = () =>
+  combineReducers({
+    [CONFIGS_REDUCER_ROOT]: generateReducers(initialState, configsEvents)
+  })
+```
 
 After that just export the event object and dispatch event using `.action` method
 ```javascript
