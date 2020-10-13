@@ -1,6 +1,6 @@
 {
   "name": "redux-events-parent",
-  "version": "1.0.1",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "rollback": "lerna exec -- npm run rollback",
