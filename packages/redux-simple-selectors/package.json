@@ -1,6 +1,8 @@
 {
   "name": "redux-simple-selectors",
   "version": "0.1.0",
+  "private": true,
+  "description": "Simple Redux Selectors - auto generate selectors from the initial state",
   "dependencies": {
     "reselect": "4.0.0"
   },
