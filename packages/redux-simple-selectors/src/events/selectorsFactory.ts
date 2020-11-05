@@ -6,7 +6,10 @@ import {isPlainObject} from '../utils/objectUtils'
 /**
  * selector with deep equals instead of "==="
  */
-const createSelector = createSelectorCreator(defaultMemoize, equals)
+export const createDeepEqualsSelector = createSelectorCreator(
+  defaultMemoize,
+  equals
+)
 
 const selectorFieldName = 'selector'
 
@@ -14,7 +17,7 @@ const fillSelectorsRec = (object: State, ...pathParams: string[]): State => {
   if (object) {
     if (!object[selectorFieldName]) {
       // eslint-disable-next-line no-param-reassign
-      object[selectorFieldName] = createSelector(
+      object[selectorFieldName] = createDeepEqualsSelector(
         path(pathParams),
         (value) => value
       )

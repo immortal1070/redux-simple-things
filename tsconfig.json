@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig-shared.json",
   "include": [
-    "packages/redux-simple-events/src/**/*"
+    "packages/redux-simple-events/src/**/*",
+    "packages/redux-simple-selectors/src/**/*"
   ]
 }

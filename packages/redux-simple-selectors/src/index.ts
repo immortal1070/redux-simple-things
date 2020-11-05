@@ -1,3 +1,6 @@
-import {fillSimpleSelectors} from './events/selectorsFactory'
+import {
+  createDeepEqualsSelector,
+  fillSimpleSelectors
+} from './events/selectorsFactory'
 
-export {fillSimpleSelectors}
+export {createDeepEqualsSelector, fillSimpleSelectors}
