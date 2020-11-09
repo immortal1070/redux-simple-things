@@ -1,7 +1,20 @@
-## Redux Simple Events
+# Redux Simple Events
+[![npm version](https://img.shields.io/npm/v/redux-simple-events.svg)](https://www.npmjs.com/package/redux-simple-events)
+
 The idea of this project is to propose one of the solutions for the known "Redux boilerplate" problem.
 
-### Problem
+# Getting started
+## Install
+
+```sh
+$ npm install redux-simple-events
+```
+or
+```sh
+$ yarn add redux-simple-events
+```
+
+### Which problems this project tries to solve
 In the past I was storing all the Redux-related files in different folders:
 * action types
 * action creators
