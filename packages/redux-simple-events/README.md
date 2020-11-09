@@ -1,6 +1,7 @@
 ## Redux Simple Events
 The idea of this project is to propose one of the solutions for the known "Redux boilerplate" problem.
 
+### Problem
 In the past I was storing all the Redux-related files in different folders:
 * action types
 * action creators
@@ -11,16 +12,18 @@ Also for small pages it always meant to insert code into several files just for 
 
 When you search for usages of action creator you don't see which reducers and sagas are using it.
 
+### Solution
 To solve this problem I used the next approach which works perfect for small pages.
 
 type, action creator and reducer are described as a `Event` object.action
 
-Benefits
+*Benefits*
 * easy to debug
 * when you create an action usually you want to control and see what does it do with state
 * minimal boilerplate
 * not a silver bullet of course - for big complex logic it's probably not suitable
 
+### Implementation
 Idea is to describe events in one file:
 ```javascript
 import {initEvents} from 'redux-simple-events'
